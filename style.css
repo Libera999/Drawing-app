@@ -1,7 +1,44 @@
 *{
     box-sizing: border-box;
+    font-family: Calibri;
+    color: #706a6a;
+    
 }
 
 #canvas{
-    border: 3px solid black;
+    border: 3px solid #706a6a;
+    margin-left: auto;
+    box-shadow: -2px 2px 10px 7px rgba(0, 0, 128, 0.1);
+}
+
+.tools .color-field{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: inline-block;   
+    margin:5px 5px;
+}
+
+.tools{
+    display:flex;
+    padding: 10px; 
+    flex-direction: row; 
+}
+
+.color-picker{
+    align-margin: center;
+    margin:5px 15px;
+    height: 40px;
+}
+
+.brush-radius{
+    align-margin: center;
+    margin:0 10px;
+    height: 40px;
+}
+
+.pick-text{
+    text-align: center;
 }

@@ -3,15 +3,15 @@ window.addEventListener('load', () => {
     const ctx = canvas.getContext("2d");
 
     canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    //ctx.beginPath();
-    //ctx.moveTo(100,100);
-    //ctx.lineTo(200,100);
-    //ctx.strokeStyle="blue";
-    //ctx.stroke();
+    canvas.width =  window.innerWidth;
 
     let painting = false;
+    let draw_color = "black";
+
+    function change_color(element) {
+        draw_color = element.style.background;
+        console.log("change");
+    }
 
     function startPos(){
         painting = true;
@@ -28,11 +28,13 @@ window.addEventListener('load', () => {
         ctx.lineWidth = 8;
         ctx.lineCap = "round";
         ctx.lineTo(e.clientX, e.clientY);
-        ctx.strokeStyle="blue";
+        ctx.strokeStyle=draw_color;
         ctx.stroke();
     }
+
 
     canvas.addEventListener('mousedown', startPos);
     canvas.addEventListener('mouseup', endPos);
     canvas.addEventListener('mousemove', paint);
+
 });

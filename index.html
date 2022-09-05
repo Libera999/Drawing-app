@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Canvas</title>
+    <script type="text/javascript" src="canvas.js"></script>
 </head>
+
 <body>
     <canvas id="canvas"></canvas>
-    <script src="canvas.js"></script>
+
+    <div class="tools">
+         
+            <div class="color-field" style="background: #df4d4d" click.delegate = "change_color(this)"></div>     
+            <div click.delegate="change_color(this)" class="color-field" style="background: rgb(180, 243, 33)"></div> 
+            <div click.delegate="change_color(this)" class="color-field" style="background: #1f46c5"></div> 
+       
+          <br>
+            <div click.delegate="change_color(this)" class="color-field" style="background: rgb(252, 255, 49)"></div> 
+            <div click.delegate="change_color(this)" class="color-field" style="background: #880b82"></div> 
+            <div click.delegate="change_color(this)" class="color-field" style="background: #90f1f1"></div> 
+        
+            <div>
+               
+                <input onInput="draw_color = this.value" type="color" class="color-picker">
+                <p class="pick-text">Pick color</p>
+            </div>
+           
+         <!-- <h3>select color </h3> -->
+            <input type="range" min="1" max="100" class="brush-radius">
+        
+      
+    </div>
 </body>
+
+  
+
 </html>
